@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BooksCafe EPUB Reader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root, [data-theme="cafe-light"] {
+        --color-bg: #F5EFE6;
+        --color-surface: #E8DFCA;
+        --color-text: #4A403A;
+        --color-accent: #A0937D;
+      }
+      [data-theme="cafe-dark"] {
+        --color-bg: #251e19;
+        --color-surface: #42362e;
+        --color-text: #E0D6CC;
+        --color-accent: #BFA890;
+      }
+      [data-theme="pastel-light"] {
+        --color-bg: #FFF5E1;
+        --color-surface: #FFD6D6;
+        --color-text: #8D5B4C;
+        --color-accent: #E9A8A9;
+      }
+      [data-theme="pastel-dark"] {
+        --color-bg: #5C3D46;
+        --color-surface: #744F5A;
+        --color-text: #FDE8E8;
+        --color-accent: #F4B5B5;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bg': 'var(--color-bg)',
+              'surface': 'var(--color-surface)',
+              'text': 'var(--color-text)',
+              'accent': 'var(--color-accent)',
+            },
+            fontFamily: {
+              sans: ['"Inter"', 'sans-serif'],
+              serif: ['"Lora"', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://unpkg.com/epubjs/dist/epub.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0",
+    "dexie": "https://aistudiocdn.com/dexie@^4.2.1",
+    "dexie-react-hooks": "https://aistudiocdn.com/dexie-react-hooks@^4.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.14.0",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0",
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "electron": "https://aistudiocdn.com/electron@^39.0.0",
+    "electron-is-dev": "https://aistudiocdn.com/electron-is-dev@^3.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "BooksCafe EPUB Reader",
+  "description": "An aesthetic, cafe-themed web application for reading .epub files. Upload your e-books to a personal library and enjoy a customizable reading experience with a dark mode toggle.",
+  "requestFramePermissions": []
+}
